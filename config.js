@@ -3,87 +3,148 @@
 // ============================================
 
 const CONFIG = {
-    // Your Valentine's name that will appear in the title
-    // Example: "Jade", "Sarah", "Mike"
+
+    // Your Valentine's name
     valentineName: "Harshika",
 
-    // The title that appears in the browser tab
-    // You can use emojis! 💝 💖 💗 💓 💞 💕
+    // Floating photos
+    floatingImages: [
+        "https://res.cloudinary.com/ddtgpwp3b/image/upload/v1770379211/WhatsApp_Image_2026-02-06_at_17.26.01_1_pnyhk4.jpg",
+        "https://res.cloudinary.com/ddtgpwp3b/image/upload/v1770379210/WhatsApp_Image_2026-02-06_at_17.25.42_pxeiga.jpg",
+        "https://res.cloudinary.com/ddtgpwp3b/image/upload/v1770379210/WhatsApp_Image_2026-02-06_at_17.27.13_ezvb9o.jpg",
+        "https://res.cloudinary.com/ddtgpwp3b/image/upload/v1770379210/WhatsApp_Image_2026-02-06_at_17.26.02_plnxdm.jpg",
+        "https://res.cloudinary.com/ddtgpwp3b/image/upload/v1770379209/WhatsApp_Image_2026-02-06_at_17.26.01_miqj7b.jpg"
+    ],
+
+    // Page title
     pageTitle: "Will You Be My Valentine? 💝",
 
-    // Floating emojis that appear in the background
-    // Find more emojis at: https://emojipedia.org
+    // Floating emojis
     floatingEmojis: {
-        hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis
-        bears: ['🧸', '🐻']                       // Cute bear emojis
+        hearts: ['❤️', '💖', '💝', '💗', '💓'],
+        bears: ['🧸', '🐻']
     },
 
-    // Questions and answers
-    // Customize each question and its possible responses
     questions: {
         first: {
-            text: "Do you like me?",                                    // First interaction
-            yesBtn: "Yes",                                             // Text for "Yes" button
-            noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            text: "Do you like me?",
+            yesBtn: "Yes",
+            noBtn: "No",
+            secretAnswer: "I don't like you, I love you! ❤️"
         },
         second: {
-            text: "How much do you love me?",                          // For the love meter
-            startText: "This much!",                                   // Text before the percentage
-            nextBtn: "Next ❤️"                                         // Text for the next button
+            text: "How much do you love me?",
+            startText: "This much!",
+            nextBtn: "Next ❤️"
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2026 and forever and ever and ever until we both die hand in hand? 🌹", // The big question!
-            yesBtn: "Yes!",                                             // Text for "Yes" button
-            noBtn: "No"                                                 // Text for "No" button
+            text: "Will you be my Valentine on February 14th, 2026 and forever and ever and ever until we both die hand in hand? 🌹",
+            yesBtn: "Yes!",
+            noBtn: "No"
         }
     },
 
-    // Love meter messages
-    // They show up depending on how far they slide the meter
     loveMessages: {
-        extreme: "OMG YAAAAAAAAAAAAAAAAAYYYYYYYY I LOVE YOUUUU SOOOOO MUCHHHH THIS PLUS ONE MUEHEHEHE SO I LOVE U MORE",  // Shows when they go past 5000%
-        high: "sirf 100% baby mein toh aapse isse 10000000 guna zyada pyaar karta hu",              // Shows when they go past 1000%
-        normal: "aw sirf ittu sa pyaar karti ho kya? i love you soo much more"                           // Shows when they go past 100%
+        extreme: "OMG YAAAAAAAAAAAAAAAAAYYYYYYYY I LOVE YOUUUU SOOOOO MUCHHHH",
+        high: "sirf 100% baby mein toh aapse isse 10000000 guna zyada pyaar karta hu",
+        normal: "aw sirf ittu sa pyaar karti ho kya? i love you soo much more"
     },
 
-    // Messages that appear after they say "Yes!"
     celebration: {
         title: "YAAAYAYAYAYAYYAYAYAYAYAYA IM SOOOO HAAPPPPPYYYYYYYYYYYYYYY!!!!!!!!!!!!",
-        message: "I love you so much my sweet baby girl, youre the perfect girlfriend for me i love you with all my heart i promise i will work to give you the best life you deserve",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
+        message: "I love you so much my sweet baby girl, youre the perfect girlfriend for me i love you with all my heart i promise i will work to give you the best life you deserve, i cant wait to spend the rest of my life with you i will never stop making you laugh and irritating you it is literally my favourite thing ever second only to you, i love you so much mrs rustomji happy valentines day my sweet baby girl ❤️",
+        emojis: "🎁💖🤗💝💋❤️💕"
     },
 
-    // Color scheme for the website
-    // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
     colors: {
-        backgroundStart: "#ffafbd",      // Gradient start (try pastel colors for a soft look)
-        backgroundEnd: "#ffc3a0",        // Gradient end (should complement backgroundStart)
-        buttonBackground: "#ff6b6b",     // Button color (should stand out against the background)
-        buttonHover: "#ff8787",          // Button hover color (slightly lighter than buttonBackground)
-        textColor: "#ff4757"             // Text color (make sure it's readable!)
+        backgroundStart: "#ffafbd",
+        backgroundEnd: "#ffc3a0",
+        buttonBackground: "#ff6b6b",
+        buttonHover: "#ff8787",
+        textColor: "#ff4757"
     },
 
-    // Animation settings
-    // Adjust these if you want faster/slower animations
     animations: {
-        floatDuration: "15s",           // How long it takes hearts to float up (10-20s recommended)
-        floatDistance: "50px",          // How far hearts move sideways (30-70px recommended)
-        bounceSpeed: "0.5s",            // Speed of bouncing animations (0.3-0.7s recommended)
-        heartExplosionSize: 1.5         // Size of heart explosion effect (1.2-2.0 recommended)
+        floatDuration: "15s",
+        floatDistance: "50px",
+        bounceSpeed: "0.5s",
+        heartExplosionSize: 1.5
     },
 
-    // Background Music (Optional)
-    // Add your own music URL after getting proper licenses
     music: {
-        enabled: true,                     // Music feature is enabled
-        autoplay: true,                    // Try to autoplay (note: some browsers may block this)
-        musicUrl: "https://res.cloudinary.com/ddtgpwp3b/video/upload/v1770362903/Apocalypse_-_Cigarettes_After_Sex_o9yhem.mp3", // Music streaming URL
-        startText: "🎵 Play Music",        // Button text to start music
-        stopText: "🔇 Stop Music",         // Button text to stop music
-        volume: 0.5                        // Volume level (0.0 to 1.0)
+        enabled: true,
+        autoplay: true,
+        musicUrl: "https://res.cloudinary.com/ddtgpwp3b/video/upload/v1770362903/Apocalypse_-_Cigarettes_After_Sex_o9yhem.mp3",
+        startText: "🎵 Play Music",
+        stopText: "🔇 Stop Music",
+        volume: 0.5
     }
 };
 
-// Don't modify anything below this line unless you know what you're doing
-window.VALENTINE_CONFIG = CONFIG; 
+// REQUIRED
+window.VALENTINE_CONFIG = CONFIG;
+
+
+
+// ============================================
+// FLOATING IMAGE SYSTEM
+// ============================================
+
+function createFloatingImage() {
+
+    const images = window.VALENTINE_CONFIG.floatingImages;
+
+    if (!images || images.length === 0) return;
+
+    const img = document.createElement("img");
+
+    img.src = images[Math.floor(Math.random() * images.length)];
+
+    img.style.position = "fixed";
+    img.style.bottom = "-100px";
+    img.style.left = Math.random() * 100 + "vw";
+
+    const size = 60 + Math.random() * 50;
+
+    img.style.width = size + "px";
+    img.style.height = size + "px";
+
+    img.style.pointerEvents = "none";
+    img.style.zIndex = "0";
+
+    const duration = 12 + Math.random() * 8;
+
+    img.style.animation = `floatPhoto ${duration}s linear forwards`;
+
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+        img.remove();
+    }, duration * 1000);
+}
+
+
+// spawn images
+setInterval(createFloatingImage, 1000);
+
+
+// animation CSS
+const style = document.createElement("style");
+
+style.innerHTML = `
+@keyframes floatPhoto {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+`;
+
+document.head.appendChild(style);
